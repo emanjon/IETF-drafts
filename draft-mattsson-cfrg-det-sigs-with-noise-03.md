@@ -1,7 +1,7 @@
 ---
 title: Deterministic ECDSA and EdDSA Signatures with Additional Randomness
 abbrev: Hedged ECC Signatures
-docname: draft-mattsson-cfrg-det-sigs-with-noise-03
+docname: draft-mattsson-cfrg-det-sigs-with-noise-04
 
 ipr: trust200902
 cat: info
