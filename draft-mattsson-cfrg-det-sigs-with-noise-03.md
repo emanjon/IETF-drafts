@@ -488,7 +488,7 @@ Implementations need to follow best practices on how to protect against all side
 
 # For discussion (to be removed in the future)
 
-* Ordering of the parameters dom2(F, C), Z, prefix, 000..., and PH(M)
+* Ordering of the parameters dom2(F, C), Z, prefix, 000..., and PH(M) in Ed25519 and similar in Ed448 and ECDSA.
 
 --- back
 
