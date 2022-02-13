@@ -32,7 +32,6 @@ author:
         email: sini.ruohomaa@ericsson.com
         
 normative:
-
   RFC2119:
   RFC6979:
   RFC8032:
@@ -49,8 +48,8 @@ normative:
     date: July 2013
 
 informative:
-
   RFC8937:
+  I-D.irtf-cfrg-frost:
 
   BSI:
     target: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Interpretationen/AIS_46_ECCGuide_e_pdf.pdf?__blob=publicationFile
