@@ -487,6 +487,6 @@ Implementations need to follow best practices on how to protect against all side
 # Acknowledgments
 {: numbered="no"}
 
-The authors want to thank Tony Arcieri, Uri Blumenthal, and Quynh Dang for their valuable comments and feedback.
+The authors want to thank Tony Arcieri, Uri Blumenthal, Carsten Bormann, and Quynh Dang for their valuable comments and feedback.
 
 --- fluff
