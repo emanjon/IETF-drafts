@@ -33,9 +33,10 @@ author:
         
 normative:
 
+  RFC2119:
   RFC6979:
   RFC8032:
-  RFC8937:
+  RFC8174:
 
   FIPS-186-4:
     target: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
@@ -47,6 +48,8 @@ normative:
     date: July 2013
 
 informative:
+
+  RFC8937:
 
   BSI:
     target: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Interpretationen/AIS_46_ECCGuide_e_pdf.pdf?__blob=publicationFile
@@ -413,6 +416,10 @@ Government agencies are clearly concerned about these attacks. In {{Notice-186-5
 One countermeasure to  entropy failures, side-channel attacks, and fault injection attacks recommended by {{Langley13}} {{RP17}} {{ABFJLM17}} {{SBBDS17}} {{PSSLR17}} {{SB18}} {{AOTZ19}} {{FG19}} and implemented in {{OpenSSL13a}} {{OpenSSL13b}} {{XEdDSA}} {{libSodium}} {{libHydrogen}} is to generate the per-message secret number from a random string, a secret key, and the message. This combines the security benefits of fully-randomized per-message secret numbers with the security benefits of fully-deterministic secret numbers.  Such a construction protects against key compromise due to weak random number generation, but still effectively prevents many side-channel and fault injection attacks that exploit determinism. Such a constuction require minor changes to the implementation and does not increase the number of elliptic curve point multiplications and is therefore suitable for constained IoT. Adding randomness to EdDSA is not compliant with [RFC8032]. {{Kampanakis16}} describes an alternative {{FIPS-186-4}} compliant approach where message specific pseudo-random information is used as an additional input to the random number generation to create per-message secret number. {{Bernstein14}} states that generation of the per-message secret number from a subset of a random string, a secret key, the message, and a message counter is common in DSA/ECDSA implementations.
 
 This document updates {{RFC6979}} and {{RFC8032}} to recommend constructions with additional randomness for deployments where side-channel and fault injection attacks are a concern.  Produced signatures remain fully compatible with unmodified ECDSA and EdDSA verifiers and existing key pairs can continue to be used. As the precise use of the noise is specified, test vectors can still be produced and implementations can be tested against them.
+
+# Conventions Used in This Document
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 {{RFC2119}} {{RFC8174}} when, and only when, they appear in all capitals, as shown here.
 
 # Updates to RFC 8032 (EdDSA) {#SecEdDSA}
 
