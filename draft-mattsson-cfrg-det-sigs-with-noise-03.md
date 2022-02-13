@@ -37,6 +37,7 @@ normative:
   RFC6979:
   RFC8032:
   RFC8174:
+  RFC8692:
 
   FIPS-186-4:
     target: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
