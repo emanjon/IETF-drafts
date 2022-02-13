@@ -421,7 +421,7 @@ For Ed25519ph, Ed25519ctx, and Ed25519: In deployments where side-channel and fa
        2.  Compute SHA-512(dom2(F, C) || Z || prefix || 000... || PH(M)),
            where M is the message to be signed, Z is 32 octets of random
            data, the number of zeroes 000... is chosen so that the length
-           of (dom2(F, C) || Z || prefix || 000...)  is 1024 bytes.
+           of (dom2(F, C) || Z || prefix || 000...) is 128 octets.
            Interpret the 64-octet digest as a little-endian integer r.
 
 For Ed448ph and Ed448: In deployments where side-channel and fault injection attacks are a concern, the following step is RECOMMENDED instead of step (2) in Section 5.3.6 of {{RFC8032}}:
@@ -429,8 +429,8 @@ For Ed448ph and Ed448: In deployments where side-channel and fault injection att
        2.  Compute SHAKE256(dom4(F, C) || Z || prefix || 000... || PH(M),
            114), where M is the message to be signed, and Z is 57 octets
            of random data, the number of zeroes 000... is chosen so that
-           the length of (dom4(F, C) || Z || prefix || 000...) is 1088
-           bytes. F is 1 for Ed448ph, 0 for Ed448, and C is the context
+           the length of (dom4(F, C) || Z || prefix || 000...) is 136
+           octets. F is 1 for Ed448ph, 0 for Ed448, and C is the context
            to use. Interpret the 114-octet digest as a little-endian
            integer r.
 
@@ -478,7 +478,7 @@ Implementations need to follow best practices on how to protect against all side
 
 # For discussion (to be removed in the future)
 
-* Amount of randomness - The current construction uses random data of the same length as 'prefix' or 'int2octets(x)' which means 32 bytes of randomness for Ed25519.  XEdDSA uses 64 bytes of randomness which might be overkill.  As discussed in [SBBDS17], the amount of randomness needed depends on the targeted security level. 32 bytes of randomness should be enough for Ed448 and 16 bytes of randomness should be enough for Ed25519.  Even less than that is likely sufficient to prevent practical attacks.
+* Amount of randomness - The current construction uses random data of the same length as 'prefix' or 'int2octets(x)' which means 32 octets of randomness for Ed25519.  XEdDSA uses 64 octets of randomness which might be overkill.  As discussed in [SBBDS17], the amount of randomness needed depends on the targeted security level. 32 boctets of randomness should be enough for Ed448 and 16 octets of randomness should be enough for Ed25519.  Even less than that is likely sufficient to prevent practical attacks.
 
 * Deterministic ECDSA with SHAKE - NIST is planning to approve SHAKE128(M,128) and SHAKE256(M,256) for use in ECDSA {{Draft-186-5}}. Deterministic ECDSA as specified in {{RFC6979}} would then use HMAC-SHAKE instead of a more optimal KMAC, which would be the prefered keyed hash function for use with SHAKE. It should be discussed if IETF (or NIST) should specify that the resulting HMAC-SHAKE128(K, M) and HMAC-SHAKE256(K, M) in deterministic ECDSA should be replaced with KMAC128(K,M,128) and KMAC256(K,M,128).
 
