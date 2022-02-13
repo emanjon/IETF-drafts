@@ -461,7 +461,7 @@ For Deterministic ECDSA: In existing ECDSA deployments where side-channel and fa
           K = HMAC_K(V || 0x01 || Z || int2octets(x) || 000... ||
                      bits2octets(h1))
 
-In new deployments, where side-channel and fault injection attacks are a concern, EdDSA with additional randomness as specified in Section 2 is RECOMMENDED.
+In new deployments, where side-channel and fault injection attacks are a concern, EdDSA with additional randomness as specified in {{SecEdDSA}} is RECOMMENDED.
 
 # Security Considerations
 
