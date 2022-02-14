@@ -47,6 +47,24 @@ normative:
         ins: "National Institute of Standards and Technology, U.S. Department of Commerce"
     date: July 2013
 
+  SHA3:
+    target: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf
+    title: "SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions"
+    seriesinfo: "NIST FIPS PUB 202"
+    author:
+      -
+        ins: "National Institute of Standards and Technology (NIST)"
+    date: August 2015
+
+  KMAC:
+    target: http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-185.pdf
+    title: "SHA-3 Derived Functions: cSHAKE, KMAC, TupleHash and ParallelHash"
+    seriesinfo: "NIST SP 800-185"
+    author:
+      -
+        ins: "National Institute of Standards and Technology (NIST)"
+    date: December 2016
+
 informative:
   RFC8937:
   I-D.irtf-cfrg-frost:
