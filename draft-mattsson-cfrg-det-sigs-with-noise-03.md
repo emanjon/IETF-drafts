@@ -515,7 +515,7 @@ are obliously not deteministic anymore. Several suggestions for new names: "mess
 
 * Ordering of the parameters in "dom2(F, C) \|\| Z \|\| prefix \|\| 000... \|\| PH(M)" in Ed25519 and similar in Ed448 and ECDSA. There has also been sugestion to use a larger Z and to use several paddings 000....
 
-* Ilari Liusvaara pointed out attacks using the context that needs to be considered.
+* Ilari Liusvaara pointed out attacks using the context that needs to be considered. Some statements "first block is composed only of the hashed private key and the random value" in the document are not true for Ed25519ctx and Ed448ctx.
 
 * Jim Schaad: Is there any advantage to stealing one of the zeros from the end padding and using it to pad between 'Z' and 'x' in the construction? I would assume that it should use the '0'/'1' construction between steps d and f.
 
