@@ -513,7 +513,7 @@ Implementations need to follow best practices on how to protect against all side
 * Strong consensus to change the name "Deterministic ECDSA and EdDSA Signatures with Additional Randomness". The signatures
 are obliously not deteministic anymore. Several suggestions for new names: "message-dependent", "message-keyed", "entropy stealing", "entropy combining", "whitening", "keyed entropy whitening", "hedged", "noise".
 
-* Ordering of the parameters in "dom2(F, C) || Z || prefix || 000... || PH(M)" in Ed25519 and similar in Ed448 and ECDSA. There has also been sugestion to use a larger Z and to use several paddings 000....
+* Ordering of the parameters in "dom2(F, C) \|\| Z \|\| prefix \|\| 000... \|\| PH(M)" in Ed25519 and similar in Ed448 and ECDSA. There has also been sugestion to use a larger Z and to use several paddings 000....
 
 * Ilari Liusvaara pointed out attacks using the context that needs to be considered.
 
